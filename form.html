@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        padding: 50px;
+        margin: 50px;
+        margin-left: 100px;
+        font-family: Arial, Helvetica, sans-serif;
+        background-image:url('assets/img/gallery/bg.jpeg');
+        opacity: 0.6;
+        background-color: rgba(255, 251, 251, 0.783);
+        
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      
+      .required{
+        color:red;
+        font-size: large;
+      }
+
+      .header h1{
+        text-align: center;
+        font: 40px;
+        text-transform: capitalize;
+        letter-spacing: 2;
+        color: orangered;
+      }
+
+      .header p{
+        text-align: center;
+        font-size: 15px;
+        color: rgba(1, 1, 1, 0.532);
+      }
+
+      .form_button{
+        background-color: chocolate;
+        color: black;
+        font-weight: 500;
+        margin: 5px 50px 5px 0;
+        padding: 10px;
+      }
+      .form-inline {  
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+      }
+      
+      .form-inline label {
+        margin: 20px;
+        font-size: 16px;
+      }
+      
+      .form-inline input {
+        vertical-align: middle;
+        margin: 5px 50px 5px 0;
+        padding: 10px;
+        background-color: rgba(244, 236, 236, 0);
+        border-top: rgba(221, 221, 221, 0.013);
+        border-left: rgba(221, 221, 221, 0.013);
+        border-right: rgba(221, 221, 221, 0.013);
+        border-bottom: 1px solid rgb(9, 1, 1);
+      }
+      
+      .form-inline button {
+        padding: 10px 20px;
+        background-color: rgb(248, 129, 9);
+        border: 1px solid #ddd;
+        color: rgb(4, 4, 4);
+        cursor: pointer;
+        border-radius: 2px;
+        font-weight: 800;
+        margin: 20px;
+      }
+      
+      .form-inline button:hover {
+        background-color: rgb(248, 89, 35);
+      }
+      
+      @media (max-width: 800px) {
+        .form-inline input {
+          margin: 10px 0;
+        }
+        
+        .form-inline {
+          flex-direction: column;
+          align-items: stretch;
+        }
+      }
+      </style>
+  </head>
+<body>
+<div class="header">
+  <h1>Let us Know about you</h1>
+  <p>Your data will not be sold. Its our duty to keep your data private and secured.</p>
+</div>
+<br><br><br>
+
+<form  action="form.php" method="get">
+  <div class="form-inline">
+    <label for="fname" ><b>First name: <span class = "required">*</span></b></label>
+    <input type="text" id="fname" name="fname" placeholder="First Name" required>
+    <label for="lname" ><b>Last name:</b></label>
+    <input type="text" id="lname" name="lname" placeholder="Last Name">
+  </div>
+ <br><br>
+ <div class="form-inline">
+    <label for="mail" ><b>Email Id:<span class = "required">*</span></b></label>
+    <input type="email" id="mail" name="mail" placeholder="Email Id" required><br><br>
+    <label for="phno" ><b>Phone No:<span class = "required">*</span></b></label>
+    <input type="numeric" value="+91" size="2" ></input>
+    <input type="tel" id="phno" name="phno" size="10" placeholder="1234567890"  required>
+ </div>
+ <br><br>
+ <div class="form-inline">
+    <label for="dob" ><b>Date of Birth:</b><span class = "required">*</span></label>
+    <input type="date" id="dob" name="dob" required><br><br>
+    <label for="city"><b>City: </b></label>
+    <input type="text" id="city" name="city" placeholder="City"><br><br>
+    <label for="city"><b>State: </b></label>
+    <input type="text" id="state" name="state" placeholder="State"><br><br>
+ </div>
+ <br><br>
+  <div class="form-inline">
+    <label for="gender"><b>Gender: </b></label><br>
+    <input type="radio" id="male" name="gender" value="Male" style="margin: 5px 0.5px 5px 0;">
+    <label for="male" style="margin: 5px 5px 5px 0.5;">Male</label><br>
+    <input type="radio" id="female" name="gender" value="Female" style="margin: 5px 0.5px 5px 0;">
+    <label for="female">Female</label><br>
+    <input type="radio" id="other" name="gender" value="other" style="margin: 5px 0.5px 5px 0;">
+    <label for="other">Other</label><br><br>
+  </div>
+  <br><br>
+  <div class="form-inline">
+    <label for="Qualification"><b>Highest Education: </b><span class = "required">*</span></label>
+    <select id="edu" name="edu" required >
+      <option value="">Select</option>
+      <option value="10">10th</option>
+      <option value="bsc">B.Sc</option>
+      <option value="bcom">B.Com.</option>
+      <option value="ba">B.A</option>
+      <option value="bba">BBA</option>
+      <option value="diploma">Diploma</option>
+      <option value="vocational">Vocational Course</option>
+      <option value="iti">ITI</option>
+      <option value="be">B.E</option>
+      <option value="Btech">B.Tech</option>
+      <option value="mtech">M.Tech</option>
+      <option value="Me">M.E</option>
+      <option value="Msc">M.SC</option>
+      <option value="Mcom">M.com</option>
+      <option value="Ma">M.A</option>
+      <option value="mba">M.B.A</option>
+      <option value="Ms">M.S</option>
+      <option value="MBBS">M.B.B.S</option>
+    </select> 
+
+    <label for="interest"><b>Specialization:</b><span class = "required">*</span></label>
+    <input type="text" name="specialization" id ="specialization"  placeholder="Specialization" required>
+    <label for="interest"><b>Interest:</b><span class = "required">*</span></label>
+    <select id="interest" name="interest" required >
+      <option value="">Select</option>
+      <option value="Agriculture">Agriculture</option>
+      <option value="Food">Food</option>
+      <option value="Health">Health</option>
+      <option value="Education">Education</option>
+     
+    </select> 
+  </div>
+  <br><br>
+  
+  <div class="form-inline">
+    <button type="submit" >Submit</button>
+    <button type="reset">Clear</button>
+  </div>
+  
+</form>
+
+</body>
+</html>
